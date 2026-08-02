@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>逆熵者</title>
+<meta name="description" content="写 ADHD、抵抗，和一个人的系统。">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="wrap">
+
+  <nav class="nav">
+    <p class="brand">逆熵者</p>
+    <div>
+      <a href="index.html" aria-current="page">首页</a>
+      <a href="writing.html">写作</a>
+    </div>
+  </nav>
+
+  <header class="hero">
+    <p class="kicker">ADHD · 写作 · 一个人的系统</p>
+    <!-- 点它会换一句。句子在文件底部的 lines 数组里 -->
+    <h1 id="shout" title="点我">ADHD 不是要修好的东西，<br>是要重新编码的东西。</h1>
+    <!-- TODO 把 XXX 换成你要用的名字 -->
+    <p>我是 XXX。INFP + ADHD，工科本科、商科硕士，网络空间安全学院跑出来的。</p>
+    <p>这里放的是我自己在用的东西：怎么穿越抵抗、怎么在低电量的日子里还能产出、怎么不靠自律活下去。没有更新计划，想到才写。</p>
+    <p class="hint">↑ 点那句话，它会换</p>
+  </header>
+
+  <section>
+    <h2>从这几篇开始</h2>
+
+    <a class="entry" href="posts/hello.html">
+      <h3>这个站是怎么搭的</h3>
+      <p>顺便当排版说明书。所有标签长什么样，这一页全在。</p>
+      <span class="meta">2026-08-02</span>
+    </a>
+
+    <a class="entry is-draft" href="#">
+      <h3>为什么你不是懒，是在跟抵抗打仗</h3>
+      <p>抵抗不是意志力问题。它有形状、有触发条件，也有拆解顺序。</p>
+      <span class="meta">—</span>
+    </a>
+
+    <a class="entry is-draft" href="#">
+      <h3>社会时钟坏了，你没坏</h3>
+      <p>把"该在什么年纪做什么"这套外部时间表拆掉之后，剩下的才是你自己的节奏。</p>
+      <span class="meta">—</span>
+    </a>
+
+    <p style="margin-top:1.6rem"><a href="writing.html" class="more">全部 →</a></p>
+  </section>
+
+  <!-- now page：个人站的老传统（nownownow.com），写"此刻在干嘛"，
+       和"关于我"不同——它默认会过期，所以没有维护压力 -->
+  <section>
+    <h2>现在</h2>
+    <div class="card">
+      <h3>2026 年 8 月</h3>
+      <p class="sub">上次更新 08-02 · 过期了就说明我忘了改</p>
+      <ul>
+        <li>把这个网站建起来。没有理由，就是想弄。</li>
+        <li>写。每天一点，不设字数。</li>
+        <li>练腿，虽然不想。</li>
+        <li>王者荣耀，段位不说。</li>
+        <li>想搞清楚"不带目的地做事"到底能撑多久。</li>
+      </ul>
+    </div>
+  </section>
+
+  <section>
+    <h2>在消耗</h2>
+    <div class="grid3">
+      <div>
+        <h4>在读</h4>
+        <ul>
+          <li><strong>反脆弱</strong>Taleb</li>
+          <li><strong>千面英雄</strong>Campbell</li>
+          <li><strong>【换成你在读的】</strong></li>
+        </ul>
+      </div>
+      <div>
+        <h4>在听</h4>
+        <ul>
+          <li><strong>Huberman Lab</strong>睡眠那几期</li>
+          <li><strong>【换成你在听的】</strong></li>
+        </ul>
+      </div>
+      <div>
+        <h4>在玩</h4>
+        <ul>
+          <li><strong>王者荣耀</strong></li>
+          <li><strong>这个网站</strong>算不算</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <p class="line">先做，再命名。</p>
+  </section>
+
+  <footer>
+    <p>邮箱 <a href="mailto:ccleepd@gmail.com">ccleepd@gmail.com</a></p>
+    <p>手写 HTML，零依赖，无追踪脚本，无 cookie 弹窗。<a href="posts/hello.html">怎么搭的</a></p>
+  </footer>
+
+</div>
+
+<script>
+const lines = [
+  "ADHD 不是要修好的东西，<br>是要重新编码的东西。",
+  "欲望需要距离。",
+  "使用人生，而不是管理人生。",
+  "大众是一种幻觉。",
+  "症状即天赋。",
+  "抵抗不是懒，是有形状的东西。",
+  "先做，再命名。",
+  "不要乱想，行动起来。"
+];
+const el = document.getElementById('shout');
+let i = 0;
+el.addEventListener('click', () => {
+  el.style.opacity = 0;
+  setTimeout(() => {
+    i = (i + 1) % lines.length;
+    el.innerHTML = lines[i];
+    el.style.opacity = 1;
+  }, 180);
+});
+</script>
+
+</body>
+</html>

@@ -1,0 +1,20 @@
+# Cloudflare Pages 会自动读这个文件，给每个响应加上下面的头。
+# 本地打开无效，部署后才生效。用 securityheaders.com 扫自己的域名可以验。
+
+/*
+  # 禁止别人用 iframe 套你的站（点击劫持）
+  X-Frame-Options: DENY
+  # 别让浏览器猜 MIME 类型
+  X-Content-Type-Options: nosniff
+  # 跳到外站时不泄露完整来源 URL
+  Referrer-Policy: strict-origin-when-cross-origin
+  # 明确关掉不用的设备权限
+  Permissions-Policy: geolocation=(), microphone=(), camera=(), interest-cohort=()
+  # 一年内强制 HTTPS
+  Strict-Transport-Security: max-age=31536000; includeSubDomains
+
+  # CSP：只允许加载自己域名下的东西，全站零外链所以能收得很死。
+  # 注意 'unsafe-inline' —— 首页那段换句子的 script 和几处 style 属性是内联的。
+  # 想拿满分就把 index.html 底部的 script 挪到 main.js，把内联 style 挪进 style.css，
+  # 然后删掉这两个 'unsafe-inline'。
+  Content-Security-Policy: default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src 'none'; frame-ancestors 'none'; base-uri 'self'; form-action 'none'

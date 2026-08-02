@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>这个站是怎么搭的 · 逆熵者</title>
+<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+<div class="wrap">
+
+  <nav class="nav">
+    <p class="brand"><a href="../index.html" style="color:inherit;text-decoration:none">逆熵者</a></p>
+    <div>
+      <a href="../index.html">首页</a>
+      <a href="../writing.html">写作</a>
+    </div>
+  </nav>
+
+  <header class="post-head">
+    <h1>这个站是怎么搭的</h1>
+    <p class="meta">2026-08-02 · 顺便当排版说明书</p>
+  </header>
+
+  <article class="post">
+
+    <p>这篇是示范文章。你能在这一页看到所有排版元素长什么样——写新文章的时候照着抄标签就行。</p>
+
+    <p>整个站三样东西：<code>index.html</code>（首页）、<code>writing.html</code>（列表）、<code>style.css</code>（样式）。文章都放在 <code>posts/</code> 里。没有构建、没有框架、没有 <code>node_modules</code>。改完保存，刷新浏览器就是最终效果。</p>
+
+    <h2>二级标题长这样</h2>
+
+    <p>正文段落。中文行距开到 1.9，比英文常见的 1.5 松——照抄英文的数字，中文会挤成一坨。单栏宽度锁在 40rem，超过这个宽度眼睛换行会跳。</p>
+
+    <p>可以在句子里<strong>加重点</strong>，重点有一层淡淡的底色，比纯加粗更容易被扫到。也可以放<a href="../writing.html">链接</a>。</p>
+
+    <h3>三级标题</h3>
+
+    <ul>
+      <li>列表项</li>
+      <li>列表项，可以写长一点，换行之后缩进是对齐的</li>
+      <li>列表项</li>
+    </ul>
+
+    <blockquote>
+      <p>引用长这样。用留白和一条细线，不用灰底框——灰底框会把引用变成一个"控件"，读起来像广告位。</p>
+      <cite>—— 某个人</cite>
+    </blockquote>
+
+    <hr>
+
+    <h2>代码块</h2>
+
+    <p>行内代码是 <code>这样</code>。整块是这样：</p>
+
+<pre><code>&lt;article class="post"&gt;
+  &lt;p&gt;正文写在这儿&lt;/p&gt;
+&lt;/article&gt;</code></pre>
+
+    <p>超长的行会横向滚动，不会把整个页面撑破。</p>
+
+    <h2>加一篇新文章，三步</h2>
+
+    <ol>
+      <li>复制 <code>posts/_template.html</code>，改个文件名，比如 <code>posts/resistance.html</code></li>
+      <li>改里面的 <code>&lt;title&gt;</code>、<code>&lt;h1&gt;</code>、日期，然后往 <code>&lt;article class="post"&gt;</code> 里写正文</li>
+      <li>回到 <code>writing.html</code>，把对应那条的 <code>href</code> 指过去，删掉 <code>is-draft</code></li>
+    </ol>
+
+    <p>就这样。第三步是唯一容易忘的——忘了的话文章存在但没人找得到。</p>
+
+  </article>
+
+  <div class="post-foot">
+    <a href="../writing.html">← 回到写作</a>
+  </div>
+
+  <footer>
+    <p>手写 HTML，没有追踪脚本。</p>
+  </footer>
+
+</div>
+</body>
+</html>

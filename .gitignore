@@ -1,0 +1,14 @@
+# 系统垃圾
+Thumbs.db
+desktop.ini
+.DS_Store
+
+# 编辑器
+.vscode/
+.idea/
+*.swp
+
+# 别把私人东西手滑塞进来
+draft/
+private/
+*.local.*
