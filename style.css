@@ -212,6 +212,17 @@ section > h2 {
 
 .post { padding: 2.5rem 0 3rem; }
 .post > p { margin: 0 0 1.5rem; }
+
+/* 导语：开篇几句独立成块，节奏比正文重 */
+.post .lede {
+  font-family: var(--font-serif);
+  font-size: 1.15rem;
+  line-height: 1.85;
+  margin: 0 0 2.5rem;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid var(--line);
+}
+.post .lede span { display: block; }
 .post h2 {
   font-family: var(--font-serif);
   font-size: 1.35rem;
